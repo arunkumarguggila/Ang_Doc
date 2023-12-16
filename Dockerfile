@@ -5,8 +5,8 @@ RUN npm install
 COPY . .
 RUN ng build --prod
 
-FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
+FROM nginx
+COPY --from=stage /dist/browser /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
