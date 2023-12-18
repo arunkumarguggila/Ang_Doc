@@ -1,12 +1,14 @@
-FROM node:18.18.0 as stage
+FROM node:latest as stage
 WORKDIR /src/app
 COPY package*.json ./
-RUN npm install
+RUN npm config set strict-ssl false
+RUN npm install --legacy-peer-deps
 COPY . .
-RUN ng build --prod
+CMD ["npm", "start"]
 
 FROM nginx
 COPY --from=stage /dist/browser /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+
 
