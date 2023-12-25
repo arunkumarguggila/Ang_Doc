@@ -3,6 +3,9 @@ on: push
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     environment: Azure
     steps:
     - uses: actions/checkout@v2
