@@ -1,3 +1,4 @@
+#Node as base 
 FROM node:latest as stage
 
 WORKDIR /src/app
