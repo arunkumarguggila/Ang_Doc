@@ -6,7 +6,7 @@ AZUSER_EMAIL=$AZUSER_EMAIL
 AZORG=$AZORG
 
 # Clone GitHub repository
-git clone https://github.com/arunkumarguggila/Ang_Doc
+git clone 'https://github.com/arunkumarguggila/Ang_Doc'
 cd Ang_Doc
 
 # Navigate back to the parent directory
@@ -14,7 +14,7 @@ cd ..
 
 # Clone Azure DevOps repository
 GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/_git/GItLad_test"
-git clone $GIT_CMD_REPOSITORY
+git clone "$GIT_CMD_REPOSITORY"  # Enclose URL in double quotes
 
 # Copy files from GitHub to Azure DevOps
 cp -r Ang_Doc/* GItLad_test/
