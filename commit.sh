@@ -13,7 +13,7 @@ cd Ang_Doc
 cd ..
 
 # Clone Azure DevOps repository
-GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/_git/GItLad_test"
+GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/arunguggilla0426/_git/GItLad_test/"
 git clone "$GIT_CMD_REPOSITORY"  # Enclose URL in double quotes
 
 # Copy files from GitHub to Azure DevOps
