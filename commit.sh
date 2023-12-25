@@ -4,7 +4,7 @@ AZUSER_EMAIL=$AZUSER_EMAIL
 AZORG=$AZORG
 git clone https://github.com/arunkumarguggila/Ang_Doc
 cd Ang_Doc
-rm -rf .git
+rm -rf .github
 
 cd ..
 
