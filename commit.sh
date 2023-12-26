@@ -33,6 +33,5 @@ branch_name="feature/branch_$datetime"
 
 # Commit and push changes
 git add .
-git branch "$branch_name"
-git commit -m "Sync from GitHub to Azure DevOps"
+git commit -m "Commit changes on branch: $branch_name"
 git push
