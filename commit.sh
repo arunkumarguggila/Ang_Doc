@@ -26,7 +26,13 @@ cd arunguggila
 git config --global user.email "$AZUSER_EMAIL"
 git config --global user.name "$AZUSERNAME"
 
+# Get the current date and time
+datetime=$(date +"%Y-%m-%d_%H-%M-%S")
+# Create a branch with the current date and time
+branch_name="feature/branch_$datetime"
+
 # Commit and push changes
 git add .
+git branch "$branch_name"
 git commit -m "Sync from GitHub to Azure DevOps"
 git push
