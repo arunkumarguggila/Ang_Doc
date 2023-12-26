@@ -30,6 +30,7 @@ git config --global user.name "$AZUSERNAME"
 datetime=$(date +"%Y-%m-%d_%H-%M-%S")
 # Create a branch with the current date and time
 branch_name="feature/branch_$datetime"
+git checkout -b "$branch_name"
 
 # Commit and push changes
 git add .
