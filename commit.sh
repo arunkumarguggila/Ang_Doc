@@ -35,4 +35,4 @@ git checkout -b "$branch_name"
 # Commit and push changes
 git add .
 git commit -m "Commit changes on branch: $branch_name"
-git push
+git push --set-upstream origin "$branch_name"
